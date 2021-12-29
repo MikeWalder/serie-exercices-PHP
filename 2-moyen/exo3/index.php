@@ -57,15 +57,13 @@ $titre = "Exo 3 : Les tableaux associatifs"; //Mettre le nom du titre de la page
         }
     }
 
-    function afficherAnimauxParType($tab, $type){
-        foreach($tab as $value){
-            if($value['type'] === $type){
-                for($i = 0; $i < count($tab); $i++){
-                    foreach ($tab[$i] as $key => $value) {
-                        echo "<h5>" . ucfirst($key) . " : " . $value . "</h5>";
-                    }
-                    echo "<h5><b>********************</b></h5>";
+    function afficherAnimauxParType($tabs, $type){
+        foreach($tabs as $tab){
+            if($tab['type'] === $type){
+                foreach ($tab as $key => $value){
+                    echo "<h5>" . ucfirst($key) . " : " . $value . "</h5>";
                 }
+                echo "<h5>********************</h5>";
             }
         }
     }
@@ -73,10 +71,12 @@ $titre = "Exo 3 : Les tableaux associatifs"; //Mettre le nom du titre de la page
 
 <?php
     if(isset($_GET['type']) && !empty($_GET['type'])){
-        if($_GET['type'] === 'chien'){
+        if($_GET['type'] === "chien"){
             afficherAnimauxParType($animaux, "chien");
-        }else if($_GET['type'] === 'chat'){
+        }else if($_GET['type'] === "chat"){
             afficherAnimauxParType($animaux, "chat");
+        } else if($_GET['type'] === "tous"){
+            afficherTableauAnimaux($animaux);
         }
     }
 ?>
