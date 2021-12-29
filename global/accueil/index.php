@@ -3,7 +3,7 @@
 <!-- mettre ici le code -->
 
 <?php
-    $titre = "Mon super site d'exercice";
+    $titre = "Site d'exercices PHP par niveaux";
     $content = ob_get_clean();
     require "../common/template.php";
 ?>
