@@ -1,5 +1,5 @@
 <?php ob_start(); //NE PAS MODIFIER 
-$titre = "Exo 5 : Private & Getters"; //Mettre le nom du titre de la page que vous voulez
+$titre = "Exo 6 : Attribut statique"; //Mettre le nom du titre de la page que vous voulez
 ?>
 
 <!-- mettre ici le code -->
