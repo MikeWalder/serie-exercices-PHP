@@ -11,10 +11,8 @@
         public function __construct($nom, $degats){
             $this->id = self::$increment;
             self::$increment++;
-
             $this->nom = $nom;
             $this->degats = $degats;
-
             self::$armes[] = $this;
         }
 
@@ -44,8 +42,6 @@
 
             return $txt;
         }
-
-        
     }
 
 ?>
