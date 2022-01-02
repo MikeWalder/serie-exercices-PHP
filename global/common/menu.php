@@ -31,8 +31,8 @@
             Armes
             </a>
             <div class="dropdown-menu mt-2" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../../3-cas pratique/1-Armes/etape1/">Etape 1</a>
-                <a class="dropdown-item" href="../../3-cas pratique/1-Armes/etape2/">Etape 2</a>
+                <a class="dropdown-item" href="../../3-Armes/etape1/">Etape 1</a>
+                <a class="dropdown-item" href="../../3-Armes/etape2/">Etape 2</a>
                 <a class="dropdown-item" href="../../3-cas pratique/1-Armes/etape3/">Etape 3</a>
                 <a class="dropdown-item" href="../../3-cas pratique/1-Armes/exo4.php">exo4</a>
                 <a class="dropdown-item" href="../../3-cas pratique/1-Armes/exo5.php">exo5</a>
