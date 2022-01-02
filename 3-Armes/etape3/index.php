@@ -1,30 +1,60 @@
 <?php ob_start(); //NE PAS MODIFIER 
-$titre = "Etape 1 : les variables"; //Mettre le nom du titre de la page que vous voulez
+$titre = "Etape 3 : tableaux associatifs"; //Mettre le nom du titre de la page que vous voulez
 ?>
 
 <!-- mettre ici le code -->
 
 <?php
-    $arme1 = "épée";
-    $arme2 = "arc";
-    $arme3 = "hache";
-    $arme4 = "fléau";
 
-    echo "<h4><b>Voici toute les armes : </b></h4><br>";
-    echo "<h5>Arme 1 : " . $arme1 . "<h5>";
-    echo "<h5>Arme 2 : " . $arme2 . "<h5>";
-    echo "<h5>Arme 3 : " . $arme3 . "<h5>";
-    echo "<h5>Arme 4 : " . $arme4 . "<h5>";
+    $arme1 = [
+        "nom" => "épée",
+        "image" => "img/epee1.png",
+        "desc" => "Une arme tranchante"
+    ];
 
-    $selector = "<select name='arme' id='arme'>";
-        $selector .= "<option value=''></option>";
-        $selector .= "<option value='arme1'>Epée</option>";
-        $selector .= "<option value='arme2'>Arc</option>";
-        $selector .= "<option value='arme3'>Hache</option>";
-        $selector .= "<option value='arme4'>Fléau</option>";
-    $selector .= "</select>";
+    $arme2 = [
+        "nom" => "arc",
+        "image" => "img/arc1.png",
+        "desc" => "Une arme à distance"
+    ];
 
-    echo $selector;
+    $arme3 = [
+        "nom" => "hache",
+        "image" => "img/hache1.png",
+        "desc" => "Une arme tranchante ou un outil qui permet aussi de couper du bois"
+    ];
+
+    $arme4 = [
+        "nom" => "fleau",
+        "image" => "img/fleau1.png",
+        "desc" => "Une arme contondante du moyen-âge"
+    ];
+
+    $armes = [$arme1, $arme2, $arme3, $arme4];
+?>
+
+<p>
+    <b>Voici les armes :</b>
+</p>
+
+
+<?php
+    foreach($armes as $arme){
+        $render = "<div class='container'>";
+            $render .= "<div class='row align-items-center'>";
+                $render .= "<div class='img-thumbnail text-center col-4'>";
+                    $render .= "<img src='" . $arme['image'] . "' alt='" . $arme['nom'] . "'>";
+                $render .= "</div>";
+                $render .= "<div class='group text-center col-8'>";
+                    $render .= "<h2><b>" . $arme['nom'] . "</b></h2><br>";
+                    $render .= "" . $arme['desc'] . "<br>";
+                $render .= "</div>";
+            $render .= "</div>";
+        $render .= "</div>";
+
+        echo $render;
+    }
+
 ?>
 
 <?php
@@ -33,5 +63,5 @@ $titre = "Etape 1 : les variables"; //Mettre le nom du titre de la page que vous
  * PERMET d INCLURE LE MENU ET LE TEMPLATE
  ************************/
     $content = ob_get_clean();
-    require "../../../global/common/template.php";
+    require "../../global/common/template.php";
 ?>

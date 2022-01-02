@@ -33,11 +33,11 @@
             <div class="dropdown-menu mt-2" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="../../3-Armes/etape1/">Etape 1</a>
                 <a class="dropdown-item" href="../../3-Armes/etape2/">Etape 2</a>
-                <a class="dropdown-item" href="../../3-cas pratique/1-Armes/etape3/">Etape 3</a>
-                <a class="dropdown-item" href="../../3-cas pratique/1-Armes/exo4.php">exo4</a>
-                <a class="dropdown-item" href="../../3-cas pratique/1-Armes/exo5.php">exo5</a>
-                <a class="dropdown-item" href="../../3-cas pratique/1-Armes/exo6.php">exo6</a>
-                <a class="dropdown-item" href="../../3-cas pratique/1-Armes/exo7.php">exo7</a>
+                <a class="dropdown-item" href="../../3-Armes/etape3/">Etape 3</a>
+                <a class="dropdown-item" href="../../3-Armes/etape4/">Etape 4</a>
+                <a class="dropdown-item" href="../../3-Armes/etape5/">Etape 5</a>
+                <a class="dropdown-item" href="../../3-Armes/etape6/">Etape 6</a>
+                <a class="dropdown-item" href="../../3-Armes/etape7/">Etape 7</a>
                 <a class="dropdown-item" href="../../3-cas pratique/1-Armes/exo8.php">exo8</a>
             </div>
         </li>
