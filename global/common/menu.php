@@ -38,7 +38,7 @@
                 <a class="dropdown-item" href="../../3-Armes/etape5/">Etape 5</a>
                 <a class="dropdown-item" href="../../3-Armes/etape6/">Etape 6</a>
                 <a class="dropdown-item" href="../../3-Armes/etape7/">Etape 7</a>
-                <a class="dropdown-item" href="../../3-cas pratique/1-Armes/exo8.php">exo8</a>
+                <a class="dropdown-item" href="../../3-Armes/etape8/">Etape 8</a>
             </div>
         </li>
     </ul>

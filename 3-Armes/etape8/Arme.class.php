@@ -24,9 +24,11 @@
                     $txt .= "<div class='col-1'>";
                         $txt .= "<form action='#' method='GET'>";
                             $txt .= "<select name='level" . $this->nom . "' onChange='submit()'>";
-                                $txt .= "<option value=''> - </option>";
+                                //$txt .= "<option value=''> - </option>";
                             for($i = 1; $i <= $this->maxLevel; $i++){
-                                $txt .= "<option value='" . $i . "'>" . $i . "</option>";
+                                $txt .= "<option value='" . $i . "'";
+                                $txt .= ($i === (int)$_SESSION[$this->nom]) ? "selected" : "" ;
+                                $txt .= ">" . $i . "</option>";
                             }
                             $txt .= "</select>";
                         $txt .= "</form>";
