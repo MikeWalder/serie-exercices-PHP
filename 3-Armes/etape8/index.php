@@ -56,8 +56,6 @@ $titre = "Etape 8 : Finalisation avec les sessions"; //Mettre le nom du titre de
     }
 ?>
 
-
-
 <?php
 /************************
  * NE PAS MODIFIER
