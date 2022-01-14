@@ -1,10 +1,8 @@
-<?php
-require("header.php");
+<?php ob_start(); //NE PAS MODIFIER 
+$titre = "Connexion à la base de données"; //Mettre le nom du titre de la page que vous voulez
 ?>
 
-<div class="text-center h1 pt-2 pb-5">
-    Connexion à la base de données
-</div>
+
 
 <div class="container-fluid">
     <div class="row">
@@ -136,7 +134,7 @@ foreach ($fruits as $fruit) {
                 Résultat
             </div>
             <?php
-            require("MyPDO.class.php");
+            require("classes/MyPDO.class.php");
             $pdo = MyPDO::getPDO();
             $stmt = $pdo->prepare("SELECT nom, poids, prix FROM fruit");
             $stmt->execute();
@@ -156,5 +154,10 @@ foreach ($fruits as $fruit) {
 </div>
 
 <?php
-require("footer.php");
+/************************
+ * NE PAS MODIFIER
+ * PERMET d INCLURE LE MENU ET LE TEMPLATE
+ ************************/
+$content = ob_get_clean();
+require "../global/common/template.php";
 ?>
