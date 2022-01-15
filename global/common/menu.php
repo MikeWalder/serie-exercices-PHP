@@ -48,9 +48,9 @@
                 </a>
                 <div class="dropdown-menu mt-2" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="../../4-database/connexion.php">Connexion</a>
-                    <a class="dropdown-item" href="../../4-database/afficherFruits.php">Table fruit (POO)</a>
-                    <a class="dropdown-item" href="../../4-database/afficherPanier">Table Panier (POO)</a>
-                    <a class="dropdown-item" href="../../3-Armes/etape4/">Etape 4</a>
+                    <a class="dropdown-item" href="../../4-database/afficherFruits.php">Afficher table fruit (POO)</a>
+                    <a class="dropdown-item" href="../../4-database/afficherPanier.php">Afficher table panier (POO)</a>
+                    <a class="dropdown-item" href="../../4-database/ajouterPanier.php">Ajouter table panier (POO)</a>
                     <a class="dropdown-item" href="../../3-Armes/etape5/">Etape 5</a>
                     <a class="dropdown-item" href="../../3-Armes/etape6/">Etape 6</a>
                     <a class="dropdown-item" href="../../3-Armes/etape7/">Etape 7</a>

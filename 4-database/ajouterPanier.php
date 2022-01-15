@@ -1,5 +1,5 @@
 <?php ob_start(); //NE PAS MODIFIER 
-$titre = "Afficher paniers (BDD POO)"; //Mettre le nom du titre de la page que vous voulez
+$titre = "Ajouter Panier (BDD POO)"; //Mettre le nom du titre de la page que vous voulez
 ?>
 
 <!-- mettre ici le code -->

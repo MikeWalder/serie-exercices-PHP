@@ -35,13 +35,13 @@ class Fruits
     private function getAffichageImage()
     {
         if (preg_match("/cerise[0-9]/", $this->nom)) {
-            echo "<img src='img/cerise.png' alt='" . $this->nom . "' /><br>";
+            return "<img src='img/cerise.png' alt='" . $this->nom . "' /><br>";
         }
         if (preg_match("/banane[0-9]/", $this->nom)) {
-            echo "<img src='img/banane.png' alt='" . $this->nom . "' /><br>";
+            return "<img src='img/banane.png' alt='" . $this->nom . "' /><br>";
         }
         if (preg_match("/pomme[0-9]/", $this->nom)) {
-            echo "<img src='img/pomme.png' alt='" . $this->nom . "' /><br>";
+            return "<img src='img/pomme.png' alt='" . $this->nom . "' /><br>";
         }
 
         /* if ($this->nom === self::POMME){

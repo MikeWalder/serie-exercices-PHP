@@ -2,8 +2,6 @@
 class Panier
 {
 
-    //private static $prochainIdentifiant = 1;
-
     private $identifiant;
     private $nomClient;
     private $pommes = [];
@@ -16,43 +14,37 @@ class Panier
     {
         $this->identifiant = $identifiant;
         $this->nomClient = $nomClient;
-        /* $this->identifiant = self::$prochainIdentifiant;
-        self::$prochainIdentifiant++; */
     }
 
     public function setFruitsToPanierFromDB()
     {
-        /* if($fruit->getNom() === Fruits::POMME){
-            $this->pommes[] = $fruit;
+        $paniers = PanierManager::getFruitPanierFromDB($this->identifiant);
+        foreach ($paniers as $panier) {
+            if (preg_match("/cerise/", $panier['fruit'])) {
+                $this->cerises[] = new Fruits($panier['fruit'], $panier['poids'], $panier['prix']);
+            } else if (preg_match("/pomme/", $panier['fruit'])) {
+                $this->pommes[] = new Fruits($panier['fruit'], $panier['poids'], $panier['prix']);
+            } else if (preg_match("/banane/", $panier['fruit'])) {
+                $this->bananes[] = new Fruits($panier['fruit'], $panier['poids'], $panier['prix']);
+            }
         }
-        else if ($fruit->getNom() === Fruits::CERISE){
-            $this->cerises[] = $fruit;
-        }
-        else if($fruit->getNom() === Fruits::BANANE){
-            $this->bananes[] = $fruit;
-        } */
-        $fruits = PanierManager::getFruitPanierFromDB($this->identifiant);
-        echo "<pre>";
-        print_r($fruits);
     }
 
-    /* public function __toString(){
-            $affichage = "<p class='blue'>Voici le contenu du panier " . $this->identifiant . "</p><br><br>";
-            $affichage .= "<div class='card'>";
-            foreach ($this->pommes as $pomme){
-                $affichage .= $pomme;
-            }
-            foreach($this->cerises as $cerise){
-                $affichage .= $cerise;
-            }
-            foreach($this->bananes as $banane){
-                $affichage .= $banane;
-            }
-            $affichage .= "</div>";
-            return $affichage;
+    public function __toString()
+    {
+        $affichage = "<hr>";
+        $affichage .= "<p class='h3 font-weight-bold pt-5'>Voici le contenu du panier " . $this->identifiant . "</p><br>";
+        $affichage .= "<div class='card'>";
+        foreach ($this->pommes as $pomme) {
+            $affichage .= $pomme;
         }
-
-        public function getIdentifiant(){
-            return $this->identifiant;
-        } */
+        foreach ($this->cerises as $cerise) {
+            $affichage .= $cerise;
+        }
+        foreach ($this->bananes as $banane) {
+            $affichage .= $banane;
+        }
+        $affichage .= "</div>";
+        return $affichage;
+    }
 }
